@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, lazy, Suspense } from 'react';
 import Login from './components/Login';
-import Dashboard from './components/Dashboard';
 import { UserRole, User, DashboardState } from './types';
+
+const Dashboard = lazy(() => import('./components/Dashboard'));
 
 function App() {
   const [currentUser, setCurrentUser] = useState<User | null>(null);
@@ -29,12 +30,21 @@ function App() {
       {!currentUser ? (
         <Login onLogin={handleLogin} />
       ) : (
-        <Dashboard
-          user={currentUser}
-          onLogout={handleLogout}
-          dashboardState={dashboardState}
-          onUpdateState={updateDashboardState}
-        />
+        <Suspense fallback={
+          <div className="flex items-center justify-center h-screen bg-[#020617] text-indigo-400">
+            <div className="flex flex-col items-center gap-4">
+              <div className="w-10 h-10 border-4 border-indigo-600 border-t-transparent rounded-full animate-spin"></div>
+              <p className="font-mono text-sm animate-pulse">CARICAMENTO SISTEMA...</p>
+            </div>
+          </div>
+        }>
+          <Dashboard
+            user={currentUser}
+            onLogout={handleLogout}
+            dashboardState={dashboardState}
+            onUpdateState={updateDashboardState}
+          />
+        </Suspense>
       )}
     </div>
   );

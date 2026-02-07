@@ -1,14 +1,17 @@
-import React, { useState } from 'react';
+import React, { useState, lazy, Suspense } from 'react';
 import { UserRole, RiskLevel, User, DashboardState } from '../types';
-import RiskMap from './RiskMap';
-import AIChat from './AIChat';
+const RiskMap = lazy(() => import('./RiskMap'));
+const AIChat = lazy(() => import('./AIChat'));
+// Helper for charts to avoid large bundle? Recharts is large but maybe keep it for now as it's used in main view. 
+// Actually, charts are used in the main view so they will be loaded anyway.
 import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, AreaChart, Area, CartesianGrid } from 'recharts';
 import { Activity, Thermometer, ShieldAlert, Truck, Bed, AlertTriangle, Menu, Settings, Bell, LogOut, CloudRain, Sun, Zap, FileText } from 'lucide-react';
 import { MOCK_HOSPITALS, ACTIVE_ALERTS } from '../constants';
-import ResourcesView from './ResourcesView';
-import HospitalsView from './HospitalsView';
-import SettingsView from './SettingsView';
-import EnvironmentalReport from './EnvironmentalReport';
+
+const ResourcesView = lazy(() => import('./ResourcesView'));
+const HospitalsView = lazy(() => import('./HospitalsView'));
+const SettingsView = lazy(() => import('./SettingsView'));
+const EnvironmentalReport = lazy(() => import('./EnvironmentalReport'));
 
 interface DashboardProps {
     user: User;
@@ -18,6 +21,15 @@ interface DashboardProps {
 }
 
 const Dashboard: React.FC<DashboardProps> = ({ user, onLogout, dashboardState, onUpdateState }) => {
+    // Shared Suspense Fallback
+    const Loader = () => (
+        <div className="w-full h-full flex items-center justify-center text-slate-500">
+            <div className="flex flex-col items-center gap-2">
+                <Activity className="animate-spin text-indigo-500" size={24} />
+                <span className="text-xs font-mono uppercase">Caricamento modulo...</span>
+            </div>
+        </div>
+    );
     const [layers, setLayers] = useState({
         seismic: true,
         hydro: true,
@@ -171,7 +183,9 @@ const Dashboard: React.FC<DashboardProps> = ({ user, onLogout, dashboardState, o
                                     <LayerToggle label="Idrogeologico" active={layers.hydro} onClick={() => setLayers(p => ({ ...p, hydro: !p.hydro }))} color="blue" />
                                     <LayerToggle label="Sanità" active={layers.health} onClick={() => setLayers(p => ({ ...p, health: !p.health }))} color="emerald" />
                                 </div>
-                                <RiskMap showSeismic={layers.seismic} showHydro={layers.hydro} showHealth={layers.health} />
+                                <Suspense fallback={<Loader />}>
+                                    <RiskMap showSeismic={layers.seismic} showHydro={layers.hydro} showHealth={layers.health} />
+                                </Suspense>
                             </div>
 
                             {/* Right Panel Charts */}
@@ -253,17 +267,21 @@ const Dashboard: React.FC<DashboardProps> = ({ user, onLogout, dashboardState, o
 
                         </div>
                     )}
-                    {activeTab === 'report' && <EnvironmentalReport />}
-                    {activeTab === 'resources' && <ResourcesView />}
-                    {activeTab === 'hospitals' && <HospitalsView />}
-                    {activeTab === 'settings' && <SettingsView />}
+                    <Suspense fallback={<Loader />}>
+                        {activeTab === 'report' && <EnvironmentalReport />}
+                        {activeTab === 'resources' && <ResourcesView />}
+                        {activeTab === 'hospitals' && <HospitalsView />}
+                        {activeTab === 'settings' && <SettingsView />}
+                    </Suspense>
                 </main>
             </div>
 
             {/* Floating Chatbot */}
             <div className={`fixed right-0 top-20 bottom-6 w-96 z-40 transition-transform duration-500 cubic-bezier(0.4, 0, 0.2, 1) ${showChat ? 'translate-x-0 mr-6' : 'translate-x-[120%]'}`}>
-                <div className="h-full rounded-2xl overflow-hidden shadow-2xl border border-slate-700/50">
-                    <AIChat role={user.role} dashboardState={dashboardState} user={user} />
+                <div className="h-full rounded-2xl overflow-hidden shadow-2xl border border-slate-700/50 bg-slate-900/90 backdrop-blur-xl">
+                    <Suspense fallback={<Loader />}>
+                        <AIChat role={user.role} dashboardState={dashboardState} user={user} />
+                    </Suspense>
                 </div>
             </div>
 
