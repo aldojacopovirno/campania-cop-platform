@@ -1,0 +1,55 @@
+title: Analisi Meteorologica Estrema e Rischio Ondata di Calore
+description: "Report climatico dettagliato su un periodo di 10 giorni (presumibilmente\
+  \ luglio 2023), caratterizzato da una grave ondata di calore, temperature notturne\
+  \ elevate e una generale condizione di siccit\xE0."
+alerts:
+- level: critical
+  message: "\xC8 stata rilevata un'ondata di calore *estremamente grave*. La temperatura\
+    \ massima media \xE8 stata di 35.9\xB0C, con un picco anomalo registrato a **60\xB0\
+    C**. Questa condizione rappresenta un rischio elevato per la salute pubblica e\
+    \ richiede misure di emergenza immediate, oltre alla verifica dell'affidabilit\xE0\
+    \ del sensore che ha registrato il valore di 60\xB0C."
+- level: warning
+  message: "Le temperature minime (media 24.6\xB0C, massimo 30\xB0C) non permettono\
+    \ un adeguato raffreddamento notturno, aumentando lo stress termico cumulativo\
+    \ sulla popolazione."
+sections:
+- title: Panoramica sulle Temperature e Rilevazione dell'Anomalia
+  content: "Il periodo analizzato mostra un'evidente dominanza di condizioni di calore\
+    \ estremo. La temperatura massima media di **35.9\xB0C** \xE8 ben al di sopra\
+    \ delle soglie di allarme standard. In particolare, il 75% delle massime supera\
+    \ i 37.5\xB0C.\n\nL'elemento pi\xF9 critico \xE8 il valore massimo registrato\
+    \ di **60\xB0C**. Sebbene un dato del genere possa suggerire un errore di misurazione\
+    \ (outlier), se confermato, rappresenta un record termico catastrofico. Anche\
+    \ escludendo l'anomalia, l'intervallo termico da 28\xB0C a 38\xB0C per la maggior\
+    \ parte dei giorni definisce chiaramente una situazione di *calura intensa e prolungata*.\n\
+    \nLe notti sono risultate opprimenti, con minime che hanno toccato i 30\xB0C e\
+    \ una media di 24.6\xB0C, limitando drasticamente il recupero fisiologico notturno.\n"
+  recommendation: "Si raccomanda l'attivazione immediata dei piani di emergenza per\
+    \ la salute pubblica legati al caldo intenso. \xC8 cruciale limitare l'esposizione\
+    \ durante le ore diurne e garantire l'accesso a rifugi climatizzati. Si esige\
+    \ la verifica e la ricalibrazione del sensore di temperatura che ha registrato\
+    \ il picco di 60\xB0C."
+- title: Analisi Igronometrica e Ventilazione
+  content: "L'umidit\xE0 media si attesta al 43.0%, variando tra il 25% e il 55%.\
+    \ Questi livelli, combinati con le alte temperature, possono portare a condizioni\
+    \ di disagio significativo (alto indice di calore percepito, soprattutto con umidit\xE0\
+    \ al 50-55%).\n\nLa velocit\xE0 del vento media \xE8 moderata (9.7 km/h), con\
+    \ raffiche massime di 16 km/h. La ventilazione presente non \xE8 sufficiente a\
+    \ mitigare efficacemente il calore diurno, ma contribuisce ad aumentare il tasso\
+    \ di evaporazione.\n"
+  recommendation: "L'ambiente secco e caldo aumenta il rischio di disidratazione e\
+    \ colpi di calore. Mantenere l'idratazione costante \xE8 fondamentale. L'attenzione\
+    \ deve essere alta anche sul potenziale rischio di incendi, dato il basso tasso\
+    \ di umidit\xE0 e le alte temperature."
+- title: "Precipitazioni e Siccit\xE0"
+  content: "Il regime pluviometrico \xE8 stato quasi assente. La precipitazione media\
+    \ \xE8 di soli 0.7 mm, con il 75% dei giorni senza pioggia. L'evento massimo registrato\
+    \ \xE8 di 5 mm, indicando un rovescio isolato e insufficiente per alleviare la\
+    \ siccit\xE0.\n\nQuesta scarsit\xE0 idrica, in concomitanza con il caldo estremo\
+    \ e l'alta evaporazione, aggrava le condizioni di stress idrico per la vegetazione\
+    \ e i sistemi idrici locali.\n"
+  recommendation: "Implementare misure di conservazione idrica di emergenza. Monitorare\
+    \ attentamente i livelli delle falde acquifere e dei bacini. Gli agricoltori sono\
+    \ avvisati della necessit\xE0 di irrigazione supplementare e della protezione\
+    \ delle colture dal danno termico."

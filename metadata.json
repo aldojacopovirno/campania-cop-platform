@@ -1,0 +1,7 @@
+{
+  "name": "Campania COP Platform",
+  "description": "Piattaforma regionale di Common Operating Picture per la gestione multi-hazard, sanitaria e logistica della Campania con supporto AI prescrittivo.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}
