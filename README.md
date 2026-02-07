@@ -2,7 +2,7 @@
 
 Campania COP (Common Operating Picture) Platform è una dashboard operativa avanzata per il monitoraggio e la gestione dei rischi in tempo reale nella regione Campania. Sviluppata con **React**, **Vite** e **Tailwind CSS**, la piattaforma fornisce agli operatori una visione unificata della situazione territoriale, integrando dati critici su sismi, rischio idrogeologico e stato delle strutture sanitarie.
 
-**Funzionalità Principali:**
+## Funzionalità Principali:
 *   **Dashboard Operativa:** Visualizzazione KPI in tempo reale (temperatura, rischio meteo, rischio sanitario, disponibilità mezzi).
 *   **Mappa dei Rischi:** Mappa interattiva con layer sovrapponibili per sismicità, rischio idrogeologico e logistica sanitaria.
 *   **Simulazione Scenari:** Capacità di simulare eventi critici (ondate di calore, tempeste) per testare la risposta del sistema.
