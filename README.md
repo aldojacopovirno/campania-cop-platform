@@ -13,8 +13,8 @@ Campania COP (Common Operating Picture) Platform è una dashboard operativa avan
 ## Repo Structure
 
 ```bash
-.
-├── components
+campania-cop-platform/
+├── components/
 │   ├── AIChat.tsx
 │   ├── Dashboard.tsx
 │   ├── EnvironmentalReport.tsx
@@ -23,12 +23,12 @@ Campania COP (Common Operating Picture) Platform è una dashboard operativa avan
 │   ├── ResourcesView.tsx
 │   ├── RiskMap.tsx
 │   └── SettingsView.tsx
-├── data_to_yaml
+├── data_to_yaml/
 │   ├── data.csv
 │   ├── find_model.py
 │   ├── generate_site.py
 │   └── site_config.yaml
-├── services
+├── services/
 │   └── geminiService.ts
 ├── .env.local
 ├── .gitignore
