@@ -9,7 +9,7 @@
 
 > Made with ❤️ for AI4Purpose Hackathon by Codemotion.
 
-Campania COP (Common Operating Picture) Platform is an advanced operational dashboard for real-time risk monitoring and management in the Campania region. Built with **React 19**, **Vite**, **TypeScript**, and **Tailwind CSS**, the platform provides operators with a unified view of the territorial situation, integrating critical data on seismic activity, hydrogeological risk, and healthcare facility status.
+Campania COP (Common Operating Picture) Platform is an operational dashboard for real-time risk monitoring and management in the Campania region. Built with **React 19**, **Vite**, **TypeScript**, and **Tailwind CSS**, the platform provides operators with a unified view of the territorial situation, integrating critical data on seismic activity, hydrogeological risk, and healthcare facility status.
 
 ## Key Features
 
