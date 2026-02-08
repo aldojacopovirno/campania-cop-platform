@@ -1,44 +1,33 @@
-title: 'Analisi Meteorologica Decadale: Luglio 2023'
-description: "Report sintetico su un periodo di 10 giorni a luglio 2023, caratterizzato\
-  \ da *temperature estremamente elevate* e condizioni di *siccit\xE0* persistente.\
-  \ I dati indicano una forte ondata di calore."
+title: 'Rapporto Climatologico Decadale: Luglio 2023'
+description: "Analisi di un periodo di 10 giorni caratterizzato da temperature eccezionalmente\
+  \ elevate e condizioni di marcata siccit\xE0. La media massima registrata \xE8 stata\
+  \ di 35.9\xB0C, segnalando un intenso stress termico."
 alerts:
 - level: critical
-  message: "\xC8 stata rilevata una grave e persistente **Ondata di Calore**. La temperatura\
-    \ massima media \xE8 di 35.9\xB0C, con un picco registrato di **60\xB0C**, il\
-    \ quale, se confermato, rappresenta un *pericolo estremo* per la salute pubblica\
-    \ e l'ambiente. Si raccomanda massima allerta."
-- level: warning
-  message: "Le precipitazioni sono state quasi assenti (media 0.7 mm), aggravando\
-    \ il rischio di stress idrico e incendi boschivi, data la bassa umidit\xE0 media\
-    \ (43%)."
+  message: "Ondata di calore grave in atto. La temperatura massima media sfiora i\
+    \ 36\xB0C e i valori minimi notturni (media 24.6\xB0C) non offrono adeguato sollievo\
+    \ termico. \xC8 stata registrata anche una *temperatura massima estrema di 60\xB0\
+    C*, che, se confermata, rappresenta un pericolo mortale immediato."
 sections:
-- title: Riepilogo Termico e Rischio Ipertermico
-  content: "Il periodo analizzato mostra un quadro termico critico. La temperatura\
-    \ massima media si attesta a **35.9\xB0C**, confermando una fase prolungata di\
-    \ calore intenso. Le temperature minime (media 24.6\xB0C) sono rimaste elevate,\
-    \ indicando *notti tropicali* che impediscono il recupero termico.\n\n**Anomalia\
-    \ Rilevata (60\xB0C):** Il valore massimo registrato di 60\xB0C \xE8 un'anomalia\
-    \ statistica di entit\xE0 eccezionale. Anche se potrebbe trattarsi di un errore\
-    \ di misurazione del sensore, se confermato, indica condizioni di calore letale\
-    \ in almeno un punto del periodo di rilevazione. Se si esclude questo valore estremo,\
-    \ le temperature massime giornaliere hanno comunque raggiunto stabilmente i 38\xB0\
-    C, superando ampiamente le soglie di allerta stagionali.\n"
-  recommendation: "Monitorare urgentemente l'affidabilit\xE0 del sensore che ha registrato\
-    \ i 60\xB0C. Indipendentemente da ci\xF2, emettere un'allerta rossa per l'ondata\
-    \ di calore. Consigliare alla popolazione di evitare l'esposizione al sole nelle\
-    \ ore centrali e garantire un'idratazione costante."
-- title: "Condizioni di Umidit\xE0, Vento e Siccit\xE0"
-  content: "L'umidit\xE0 media si \xE8 mantenuta su valori relativamente bassi (43%),\
-    \ con minimi toccati al 25%. Questa bassa umidit\xE0, combinata con le altissime\
-    \ temperature, aumenta notevolmente il rischio di colpo di calore e stress termico.\n\
-    \nLa velocit\xE0 del vento \xE8 risultata moderata (media 9.7), ma con raffiche\
-    \ che hanno raggiunto i 16. In un contesto di temperature estreme e bassa umidit\xE0\
-    , raffiche di vento moderate possono accelerare l'evaporazione, intensificando\
-    \ la percezione del calore e la secchezza superficiale del terreno.\n\nLe precipitazioni\
-    \ totali sono state trascurabili (massimo 5 mm in un singolo giorno), confermando\
-    \ una **situazione di siccit\xE0** che perdura nel periodo di analisi.\n"
-  recommendation: "A causa della combinazione di calore, bassa umidit\xE0 e assenza\
-    \ di piogge, attivare protocolli di prevenzione degli incendi boschivi. Implementare\
-    \ restrizioni sull'uso dell'acqua per scopi non essenziali in attesa di un cambiamento\
-    \ significativo delle condizioni meteorologiche."
+- title: Analisi Dettagliata delle Temperature
+  content: "Il periodo \xE8 dominato da una intensa ondata di calore. La temperatura\
+    \ massima media \xE8 elevatissima a **35.9\xB0C**, con il 75\xB0 percentile che\
+    \ raggiunge i 37.5\xB0C. Il range diurno \xE8 significativo, ma il dato pi\xF9\
+    \ preoccupante riguarda le minime: la media delle temperature notturne \xE8 di\
+    \ 24.6\xB0C, con picchi fino a 30\xB0C. Queste 'notti tropicali' impediscono il\
+    \ recupero fisiologico. Si evidenzia inoltre un'anomalia estrema di 60\xB0C, che\
+    \ richiede verifica immediata come potenziale errore di sensore o evento di calore\
+    \ localizzato estremo."
+  recommendation: "Attivare piani di emergenza per ondate di calore. La popolazione\
+    \ \xE8 invitata a limitare l'esposizione, idratarsi costantemente e prestare massima\
+    \ attenzione ai soggetti fragili, specialmente durante le ore notturne."
+- title: Condizioni Idrologiche e Vento
+  content: "Le precipitazioni sono state quasi assenti, con una media giornaliera\
+    \ di appena 0.7 mm e un massimo registrato di 5 mm. Questa carenza, combinata\
+    \ con un'umidit\xE0 media relativamente bassa (43%), contribuisce a condizioni\
+    \ di siccit\xE0. La velocit\xE0 del vento \xE8 stata moderata ma variabile, con\
+    \ una media di 9.7 km/h e raffiche massime fino a 16 km/h. La combinazione di\
+    \ calore, secchezza e vento moderato aumenta il **rischio di incendi boschivi**."
+  recommendation: "Si consiglia la massima cautela nell'uso di fuoco o macchinari\
+    \ che possano generare scintille. Le autorit\xE0 agricole dovrebbero considerare\
+    \ l'implementazione di restrizioni idriche immediate data la scarsit\xE0 di precipitazioni."
