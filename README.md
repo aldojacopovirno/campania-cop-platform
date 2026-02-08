@@ -24,27 +24,36 @@ Campania COP (Common Operating Picture) Platform is an operational dashboard for
 
 ```bash
 campania-cop-platform/
-├── components/                  # React components
-│   ├── AIChat.tsx               # AI Assistant chatbot (Google Gemini)
-│   ├── Dashboard.tsx            # Main dashboard with KPIs
-│   ├── EnvironmentalReport.tsx  # AI-generated environmental reports
-│   ├── HospitalsView.tsx        # Hospital view and healthcare resources
-│   ├── Login.tsx                # User authentication
-│   ├── ResourcesView.tsx        # Emergency resource management
-│   ├── RiskMap.tsx              # Interactive risk map
-│   └── SettingsView.tsx.        # System settings
-├── data_to_yaml/                # Python scripts for data processing
-│   ├── data.csv                 # Meteorological datasets
-│   ├── find_model.py            # Model discovery
-│   ├── generate_site.py         # Report generator
-│   └── site_config.yaml         # Report configuration
+├── components/                        # React components
+│   ├── AIChat.tsx                     # AI Assistant chatbot (Google Gemini)
+│   ├── Dashboard.tsx                  # Main dashboard with KPIs
+│   ├── EnvironmentalReport.tsx        # AI-generated environmental reports
+│   ├── HospitalsView.tsx              # Hospital view and healthcare resources
+│   ├── Login.tsx                      # User authentication
+│   ├── ResourcesView.tsx              # Emergency resource management
+│   ├── RiskMap.tsx                    # Interactive risk map
+│   └── SettingsView.tsx               # System settings
+├── data_to_yaml/                      # Python scripts for data processing
+│   ├── data.csv                       # Meteorological datasets
+│   ├── find_model.py                  # Model discovery
+│   ├── generate_site.py               # Report generator
+│   └── site_config.yaml               # Report configuration
+├── notebooks/                         # Jupyter notebooks for data science
+│   ├── 00_data_exploration.ipynb      # Dataset exploration & RGB/HSV analysis
+│   ├── 01_filter_clouds.ipynb         # Cloud detection (classic filters)
+│   ├── 02_filter_vegetation.ipynb     # Vegetation detection (ExG + HSV)
+│   ├── 03_filter_water.ipynb          # Water body detection
+│   ├── 04_filter_desert.ipynb         # Desert/arid area detection
+│   ├── 05_temperature_proxy.ipynb     # Temperature estimation from imagery
+│   ├── 06_ml_classification.ipynb     # CNN classifier (91% accuracy)
+│   └── 07_comparison_dashboard.ipynb  # Classic filters vs ML comparison
 ├── services/
-│   └── geminiService.ts         # API wrapper for Google Gemini
-├── App.tsx                      # Root component
-├── constants.ts                 # App constants
-├── types.ts                     # TypeScript type definitions
-├── vite.config.ts               # Vite configuration + custom middleware
-└── package.json                 # Dependencies
+│   └── geminiService.ts               # API wrapper for Google Gemini
+├── App.tsx                            # Root component
+├── constants.ts                       # App constants
+├── types.ts                           # TypeScript type definitions
+├── vite.config.ts                     # Vite configuration + custom middleware
+└── package.json                       # Dependencies
 ```
 
 ## Run Locally
@@ -93,7 +102,29 @@ campania-cop-platform/
 - `npm run preview` - Preview the production build
 - `npm run generate-report` - Generate environmental report via Python
 
-## Build & Deployment
+## Data Science & Analysis
+
+The `notebooks/` directory contains a complete data science workflow for satellite image analysis, combining **classic image processing filters** and **machine learning** approaches.
+
+### Dataset
+
+- **4 categories**: Cloudy (1,500), Desert (1,131), Green Area (1,500), Water (1,500)
+- **Image size**: 64x64 RGB images
+- **Total**: 5,631 satellite images
+
+### Running the Notebooks
+
+```bash
+# Install Python dependencies
+pip install jupyter numpy matplotlib pillow opencv-python tensorflow scikit-learn seaborn
+
+# Launch Jupyter
+jupyter notebook notebooks/
+
+# Or use VS Code with Jupyter extension
+```
+
+## Build
 
 ### Production Build
 
