@@ -7,52 +7,52 @@
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![AI4Purpose](https://img.shields.io/badge/Hackathon-AI4Purpose-FF6B6B)](https://www.codemotion.com/)
 
-> Progetto sviluppato per l'Hackathon AI4Purpose di Codemotion
+> Made with ❤️ for AI4Purpose Hackathon by Codemotion.
 
-Campania COP (Common Operating Picture) Platform è una dashboard operativa avanzata per il monitoraggio e la gestione dei rischi in tempo reale nella regione Campania. Sviluppata con **React 19**, **Vite**, **TypeScript** e **Tailwind CSS**, la piattaforma fornisce agli operatori una visione unificata della situazione territoriale, integrando dati critici su sismi, rischio idrogeologico e stato delle strutture sanitarie.
+Campania COP (Common Operating Picture) Platform is an advanced operational dashboard for real-time risk monitoring and management in the Campania region. Built with **React 19**, **Vite**, **TypeScript**, and **Tailwind CSS**, the platform provides operators with a unified view of the territorial situation, integrating critical data on seismic activity, hydrogeological risk, and healthcare facility status.
 
-## Funzionalità Principali
+## Key Features
 
-*   **Dashboard Operativa:** Visualizzazione KPI in tempo reale (temperatura, rischio meteo, rischio sanitario, disponibilità mezzi).
-*   **Mappa dei Rischi:** Mappa interattiva con layer sovrapponibili per sismicità, rischio idrogeologico e logistica sanitaria.
-*   **Simulazione Scenari:** Capacità di simulare eventi critici (ondate di calore, tempeste) per testare la risposta del sistema.
-*   **AI Assistant:** Integrazione con Google Gemini per supporto decisionale intelligente tramite chat.
-*   **Gestione Risorse:** Monitoraggio stato ospedali e allocazione risorse di emergenza.
-*   **Report Ambientali:** Sezione dedicata alla reportistica ambientale generata tramite AI.
+*   **Operational Dashboard:** Real-time KPI visualization (temperature, weather risk, health risk, vehicle availability).
+*   **Risk Map:** Interactive map with overlayable layers for seismicity, hydrogeological risk, and healthcare logistics.
+*   **Scenario Simulation:** Ability to simulate critical events (heat waves, storms) to test system response.
+*   **AI Assistant:** Integration with Google Gemini for intelligent decision support via chat.
+*   **Resource Management:** Hospital status monitoring and emergency resource allocation.
+*   **Environmental Reports:** Dedicated section for AI-generated environmental reporting.
 
 ## Repo Structure
 
 ```bash
 campania-cop-platform/
-├── components/           # React components
-│   ├── AIChat.tsx       # AI Assistant chatbot (Google Gemini)
-│   ├── Dashboard.tsx    # Main dashboard con KPI
-│   ├── EnvironmentalReport.tsx  # Report ambientali generati via AI
-│   ├── HospitalsView.tsx        # Vista ospedali e risorse sanitarie
-│   ├── Login.tsx        # Autenticazione utenti
-│   ├── ResourcesView.tsx        # Gestione risorse di emergenza
-│   ├── RiskMap.tsx      # Mappa interattiva dei rischi
-│   └── SettingsView.tsx # Impostazioni di sistema
-├── data_to_yaml/        # Python scripts per data processing
-│   ├── data.csv         # Dataset meteorologici
-│   ├── find_model.py    # Model discovery
-│   ├── generate_site.py # Report generator
-│   └── site_config.yaml # Configurazione report
+├── components/                  # React components
+│   ├── AIChat.tsx               # AI Assistant chatbot (Google Gemini)
+│   ├── Dashboard.tsx            # Main dashboard with KPIs
+│   ├── EnvironmentalReport.tsx  # AI-generated environmental reports
+│   ├── HospitalsView.tsx        # Hospital view and healthcare resources
+│   ├── Login.tsx                # User authentication
+│   ├── ResourcesView.tsx        # Emergency resource management
+│   ├── RiskMap.tsx              # Interactive risk map
+│   └── SettingsView.tsx.        # System settings
+├── data_to_yaml/                # Python scripts for data processing
+│   ├── data.csv                 # Meteorological datasets
+│   ├── find_model.py            # Model discovery
+│   ├── generate_site.py         # Report generator
+│   └── site_config.yaml         # Report configuration
 ├── services/
-│   └── geminiService.ts # API wrapper per Google Gemini
-├── App.tsx              # Root component
-├── constants.ts         # App constants
-├── types.ts             # TypeScript type definitions
-├── vite.config.ts       # Vite configuration + custom middleware
-└── package.json         # Dependencies
+│   └── geminiService.ts         # API wrapper for Google Gemini
+├── App.tsx                      # Root component
+├── constants.ts                 # App constants
+├── types.ts                     # TypeScript type definitions
+├── vite.config.ts               # Vite configuration + custom middleware
+└── package.json                 # Dependencies
 ```
 
 ## Run Locally
 
 ### Prerequisites
-- **Node.js** (v18 o superiore)
-- **Python 3** (per la generazione di report)
-- **Google Gemini API Key** ([Ottienila qui](https://ai.google.dev/))
+- **Node.js** (v18 or higher)
+- **Python 3** (for report generation)
+- **Google Gemini API Key**
 
 ### Installation
 
@@ -67,14 +67,14 @@ campania-cop-platform/
    npm install
    ```
 
-3. **Install Python dependencies** (per la generazione report)
+3. **Install Python dependencies** (for report generation)
    ```bash
    pip install -r requirements.txt
    ```
 
 4. **Configure environment variables**
 
-   Crea un file `.env.local` nella root del progetto:
+   Create a `.env.local` file in the project root:
    ```bash
    GEMINI_API_KEY=your_gemini_api_key_here
    ```
@@ -84,14 +84,14 @@ campania-cop-platform/
    npm run dev
    ```
 
-   L'applicazione sarà disponibile su `http://localhost:3000`
+   The application will be available at `http://localhost:3000`
 
 ### Available Scripts
 
-- `npm run dev` - Avvia il server di sviluppo
-- `npm run build` - Build di produzione
-- `npm run preview` - Preview della build di produzione
-- `npm run generate-report` - Genera il report ambientale via Python
+- `npm run dev` - Start the development server
+- `npm run build` - Production build
+- `npm run preview` - Preview the production build
+- `npm run generate-report` - Generate environmental report via Python
 
 ## Build & Deployment
 
@@ -101,20 +101,11 @@ campania-cop-platform/
 npm run build
 ```
 
-I file ottimizzati saranno generati nella cartella `dist/`.
-
-### Deploy
-
-La piattaforma può essere deployata su:
-- **Vercel** - `vercel deploy`
-- **Netlify** - Drag & drop della cartella `dist/`
-- **Docker** - (Dockerfile da implementare)
-
-**Note:** Assicurati di configurare la variabile d'ambiente `GEMINI_API_KEY` nel provider di hosting.
+Optimized files will be generated in the `dist/` folder.
 
 ## About the Hackathon
 
-Questo progetto è stato sviluppato nell'ambito dell'**Hackathon AI4Purpose** organizzato da **Codemotion**, un evento dedicato allo sviluppo di soluzioni innovative basate sull'Intelligenza Artificiale per affrontare problematiche sociali e ambientali reali.
+This project was developed for the **AI4Purpose Hackathon** organized by **Codemotion**, an event dedicated to developing innovative AI-based solutions to address real social and environmental challenges.
 
 ### Contributors
 - **A. J. Virno**
@@ -122,13 +113,6 @@ Questo progetto è stato sviluppato nell'ambito dell'**Hackathon AI4Purpose** or
 - **S. Bosco**
 - **D. Cioffi**
 
-
 ## License
 
-Questo progetto è rilasciato sotto licenza [MIT License](LICENSE).
-
----
-
-<div align="center">
-  Made with ❤️ for AI4Purpose Hackathon by Codemotion
-</div>
+This project is released under the [MIT License](LICENSE).
